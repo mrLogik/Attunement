@@ -1,0 +1,5 @@
+item.attunement:testItem.name=Test Item
+item.attunement:testIngot.name=Test Ingot
+tile.attunement:testBlock.name=Test Block
+tile.attunement:testOre.name=Test Ore
+itemGroup.attunement=Attunement

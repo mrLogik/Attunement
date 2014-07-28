@@ -1,0 +1,16 @@
+[
+{
+  "modid": "Attunement",
+  "name": "Attunement",
+  "description": "A mod inspired by the Last Airbender Universe.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["reConfigured","Diastolic","Andew"],
+  "credits": "reConfigured, Diastolic, Andew",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

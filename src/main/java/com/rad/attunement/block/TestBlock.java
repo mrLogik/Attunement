@@ -18,7 +18,7 @@ public class TestBlock extends AttuneBlock {
 	@Override
 	public Item getItemDropped(int num1, Random random, int num2)
     {
-        return Items.diamond;
+        return Items.redstone;
     }
 	
 	

@@ -3,7 +3,7 @@
   "modid": "Attunement",
   "name": "Attunement",
   "description": "A mod inspired by the Last Airbender Universe.",
-  "version": "${version}",
+  "version": "0.1",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",

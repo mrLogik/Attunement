@@ -18,7 +18,7 @@ public class Reference
      * Initializes everything for Attunement! Put anything
      * here you want initialized in the pre-init.
      */
-    public static void init() {
+    public static void preInit() {
     	
     	ModItems.init();
 
@@ -26,6 +26,5 @@ public class Reference
         
         Recipes.init();
         
-        WorldGen.init();
     }
 }

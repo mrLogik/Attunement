@@ -1,9 +1,6 @@
 package com.rad.attunement;
 
 import com.rad.attunement.handler.ConfigurationHandler;
-import com.rad.attunement.init.ModBlocks;
-import com.rad.attunement.init.ModItems;
-import com.rad.attunement.init.Recipes;
 import com.rad.attunement.init.WorldGen;
 import com.rad.attunement.proxy.IProxy;
 import com.rad.attunement.reference.Reference;
@@ -32,13 +29,13 @@ public class Attunement
     	ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
 
-        Reference.init(); // Initializes everything
+        Reference.preInit(); // Initializes everything
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
-        
+    	WorldGen.init();
     }
 
     @Mod.EventHandler

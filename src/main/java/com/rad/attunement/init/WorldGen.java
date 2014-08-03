@@ -12,5 +12,6 @@ public class WorldGen {
 		final AttuneWorldGen testGen = new AttuneWorldGen();
 		
 		GameRegistry.registerWorldGenerator(testGen, 0);
+		
     }
 }

@@ -7,5 +7,6 @@ public class TestOre extends AttuneBlock {
 		this.setBlockName("testOre");
         this.setBlockTextureName("testOre");
         this.setHarvestLevel("pickaxe", 3);
+        this.setHardness(4.0F);
 	}
 }

@@ -34,15 +34,20 @@ public class AttuneWorldGen implements IWorldGenerator {
     private void generateEnd(World world, Random rand, int chunkX, int chunkZ) {}
 
     private void generateSurface(World world, Random rand, int chunkX, int chunkZ) {
+        generateSurfaceOres(world,rand,chunkX,chunkZ);// this might for some reason cause lag, don't know why but in one test tick rate was low
+    }
+
+    private void generateNether(World world, Random rand, int chunkX, int chunkZ) {}
+
+    private void generateSurfaceOres(World world, Random rand, int chunkX, int chunkZ){
         for(int k = 0; k < 10; k++){
             int xPos = chunkX + rand.nextInt(16);
             int yPos = rand.nextInt(64);
             int zPos = chunkZ + rand.nextInt(16);
 
             // params(target block(for our mod it has to reference "ModBlocks.ExampleBlock"), ore vein size(number of blocks per vein))
-            (new WorldGenMinable(ModBlocks.testOre, 13)).generate(world, rand, xPos, yPos, zPos);
+            (new WorldGenMinable(ModBlocks.testOre, 10)).generate(world, rand, xPos, yPos, zPos);
         }
-    }
 
-    private void generateNether(World world, Random rand, int chunkX, int chunkZ) {}
+    }
 }

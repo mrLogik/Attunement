@@ -1,5 +1,6 @@
 package com.rad.attunement.init;
 
+import com.rad.attunement.block.TestAltar;
 import com.rad.attunement.block.TestBlock;
 import com.rad.attunement.block.AttuneBlock;
 import com.rad.attunement.block.TestOre;
@@ -12,10 +13,12 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class ModBlocks {
 	
 	public static final AttuneBlock testBlock = new TestBlock();
+    public static final AttuneBlock testAltar = new TestAltar();
 	public static final AttuneBlock testOre = new TestOre();
 	
     public static void init() {
     	GameRegistry.registerBlock(testBlock, "testBlock");
+        GameRegistry.registerBlock(testAltar, "testAltar");
     	GameRegistry.registerBlock(testOre, "testOre");
     }
 }

@@ -13,6 +13,7 @@ public class TestBlock extends AttuneBlock {
 		this.setBlockName("testBlock");
         this.setBlockTextureName("testBlock");
         this.setHarvestLevel("pickaxe", 1);
+        this.setHardness(4.0F);
 	}
 	
 	@Override

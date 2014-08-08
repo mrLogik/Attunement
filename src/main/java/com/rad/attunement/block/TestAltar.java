@@ -1,8 +1,6 @@
 package com.rad.attunement.block;
 
-/**
- * Created by Andrew on 8/3/2014.
- */
+
 public class TestAltar extends AttuneBlock {
     public TestAltar()
     {

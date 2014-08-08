@@ -1,10 +1,13 @@
 package com.rad.attunement.block;
 
+import java.util.ArrayList;
 import java.util.Random;
 
+import com.rad.attunement.init.ModItems;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 
 public class TestBlock extends AttuneBlock {
 	public TestBlock()
@@ -19,8 +22,12 @@ public class TestBlock extends AttuneBlock {
 	@Override
 	public Item getItemDropped(int num1, Random random, int num2)
     {
-        return Items.redstone;
+        return ModItems.testIngot;
     }
-	
-	
+
+    public int quantityDropped(Random rand)
+    {
+        return 8;
+    }
+
 }

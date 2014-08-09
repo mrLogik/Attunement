@@ -4,6 +4,7 @@ import java.util.Random;
 
 import com.rad.attunement.block.*;
 
+import com.rad.attunement.handler.ConfigurationHandler;
 import com.rad.attunement.init.ModBlocks;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
@@ -39,15 +40,17 @@ public class AttuneWorldGen implements IWorldGenerator {
 
     private void generateNether(World world, Random rand, int chunkX, int chunkZ) {}
 
-    private void generateSurfaceOres(World world, Random rand, int chunkX, int chunkZ){
-        for(int k = 0; k < 10; k++){
+    private void generateSurfaceOres(World world, Random rand, int chunkX, int chunkZ) {
+        for (int k = 0; k < 10; k++) {
             int xPos = chunkX + rand.nextInt(16);
             int yPos = rand.nextInt(64);
             int zPos = chunkZ + rand.nextInt(16);
 
             // params(target block(for our mod it has to reference "ModBlocks.ExampleBlock"), ore vein size(number of blocks per vein))
-            (new WorldGenMinable(ModBlocks.testOre, 10)).generate(world, rand, xPos, yPos, zPos);
-        }
+            if (ConfigurationHandler.doesGenTestOre) {
+                (new WorldGenMinable(ModBlocks.testOre, 10)).generate(world, rand, xPos, yPos, zPos);
+            }
 
+        }
     }
 }

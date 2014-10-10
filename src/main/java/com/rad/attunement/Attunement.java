@@ -2,7 +2,7 @@ package com.rad.attunement;
 
 import com.rad.attunement.handler.ConfigurationHandler;
 import com.rad.attunement.init.WorldGen;
-import com.rad.attunement.proxy.IProxy;
+import com.rad.attunement.proxy.CommonProxy;
 import com.rad.attunement.reference.Reference;
 
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -21,7 +21,7 @@ public class Attunement
     public static Attunement instance;
     
     @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
-    public static IProxy proxy;
+    public static CommonProxy proxy;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
@@ -36,6 +36,7 @@ public class Attunement
     public void init(FMLInitializationEvent event)
     {
     	WorldGen.init();
+        proxy.registerTileEntities();
     }
 
     @Mod.EventHandler

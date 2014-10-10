@@ -1,7 +1,12 @@
 package com.rad.attunement.block;
 
 
-public class TestAltar extends AttuneBlock {
+import com.rad.attunement.tileentity.AltarTileEntity;
+import net.minecraft.block.ITileEntityProvider;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.World;
+
+public class TestAltar extends AttuneBlock implements ITileEntityProvider {
     public TestAltar()
     {
         super();
@@ -9,5 +14,15 @@ public class TestAltar extends AttuneBlock {
         this.setBlockTextureName("testAltar");
         this.setHarvestLevel("pickaxe", 1);
         this.setHardness(4.0F);
+    }
+
+    @Override
+    public TileEntity createNewTileEntity(World world, int meta) {
+        return new AltarTileEntity();
+    }
+
+    @Override
+    public boolean hasTileEntity(int metadata) {
+        return true;
     }
 }

@@ -1,5 +1,6 @@
 package com.rad.attunement;
 
+import com.rad.attunement.client.gui.GuiHandler;
 import com.rad.attunement.handler.ConfigurationHandler;
 import com.rad.attunement.init.WorldGen;
 import com.rad.attunement.proxy.CommonProxy;
@@ -11,8 +12,9 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
 
-@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION) //guiFactory = Reference.GUI_FACTORY_CLASS
 public class Attunement
 {
 	
@@ -37,6 +39,7 @@ public class Attunement
     {
     	WorldGen.init();
         proxy.registerTileEntities();
+        NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
     }
 
     @Mod.EventHandler

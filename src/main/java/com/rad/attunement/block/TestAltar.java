@@ -1,13 +1,14 @@
 package com.rad.attunement.block;
 
 
-import com.rad.attunement.tileentity.AltarTileEntity;
+import com.rad.attunement.tileentity.AttuneTileEntity;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 public class TestAltar extends AttuneBlock implements ITileEntityProvider {
-    public TestAltar()
+    
+	public TestAltar()
     {
         super();
         this.setBlockName("testAltar");
@@ -17,12 +18,14 @@ public class TestAltar extends AttuneBlock implements ITileEntityProvider {
     }
 
     @Override
-    public TileEntity createNewTileEntity(World world, int meta) {
-        return new AltarTileEntity();
+    public TileEntity createNewTileEntity(World world, int meta)
+    {
+        return new AttuneTileEntity();
     }
 
     @Override
-    public boolean hasTileEntity(int metadata) {
+    public boolean hasTileEntity(int metadata)
+    {
         return true;
     }
 }

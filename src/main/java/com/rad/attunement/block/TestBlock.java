@@ -1,6 +1,5 @@
 package com.rad.attunement.block;
 
-import java.util.ArrayList;
 import java.util.Random;
 
 import com.rad.attunement.init.ModItems;
